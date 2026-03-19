@@ -6,7 +6,7 @@
 <title>Daily Briefing</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#000;color:#e0e0e0;line-height:1.6;min-height:100vh;padding:16px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:#000;color:#e0e0e0;line-height:1.6;min-height:100vh;padding:16px}
 .header{text-align:center;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid #1a1a1a}
 .sephiroth-brand{font-size:12px;font-weight:700;letter-spacing:2px;color:#cc0000;text-transform:uppercase;margin-bottom:8px}
 .briefing-title{font-size:28px;font-weight:700;color:#fff;margin-bottom:8px}
@@ -14,52 +14,50 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .briefing-timestamp{font-size:12px;color:#808080;font-style:italic}
 .section{background:#0a0a0a;border:1px solid #1a1a1a;border-radius:12px;padding:20px;margin-bottom:20px}
 .section-title{font-size:14px;font-weight:700;letter-spacing:1px;color:#cc0000;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}
-.weather-container{display:flex;align-items:center;gap:16px}
-.weather-icon{font-size:48px}
+.weather-container{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.weather-icon{font-size:48px}.weather-info{flex:1}
 .weather-temp{font-size:32px;font-weight:700;color:#fff;line-height:1;margin-bottom:4px}
 .weather-desc{font-size:14px;color:#a0a0a0}
+.news-item{padding:12px 0;border-bottom:1px solid #111}.news-item:last-child{border-bottom:none}
+.news-headline{font-size:14px;color:#fff;font-weight:600;margin-bottom:4px}
+.news-summary{font-size:13px;color:#a0a0a0}
 .news-status{font-size:12px;color:#888;font-style:italic}
-.event{display:flex;gap:12px;padding:12px 0;border-left:2px solid #cc0000;padding-left:12px;margin-bottom:12px}
-.event:last-child{margin-bottom:0}
-.event-time{font-size:13px;font-weight:600;color:#cc0000;min-width:60px}
-.event-title{font-size:14px;color:#fff;font-weight:500;margin-bottom:2px}
+.event{display:flex;gap:12px;padding:12px 0;border-left:2px solid #cc0000;padding-left:12px;margin-bottom:12px}.event:last-child{margin-bottom:0}
+.event-time{font-size:13px;font-weight:600;color:#cc0000;min-width:70px}
+.event-details{flex:1}.event-title{font-size:14px;color:#fff;font-weight:500;margin-bottom:2px}
 .event-desc{font-size:12px;color:#a0a0a0}
-.task-item{display:flex;align-items:flex-start;gap:12px;padding:12px;background:#0d0d0d;border-radius:8px;margin-bottom:10px}
-.task-item:last-child{margin-bottom:0}
-.task-checkbox{width:20px;height:20px;border:2px solid rgba(204,0,0,.5);border-radius:4px;flex-shrink:0;margin-top:2px}
-.task-title{font-size:14px;color:#fff;margin-bottom:2px}
-.task-meta{font-size:12px;color:#a0a0a0}
-.task-overdue{color:#cc0000;font-weight:600}
-.urgent-item{padding:12px;background:rgba(204,0,0,.08);border-left:3px solid #cc0000;border-radius:4px;margin-bottom:10px}
-.urgent-item:last-child{margin-bottom:0}
-.urgent-label{font-size:11px;font-weight:700;color:#cc0000;text-transform:uppercase;margin-bottom:4px;letter-spacing:.5px}
+.task-item{display:flex;align-items:flex-start;gap:12px;padding:12px;background:#0d0d0d;border-radius:8px;margin-bottom:10px}.task-item:last-child{margin-bottom:0}
+.task-checkbox{width:20px;height:20px;border:2px solid rgba(204,0,0,0.5);border-radius:4px;flex-shrink:0;margin-top:2px}
+.task-content{flex:1}.task-title{font-size:14px;color:#fff;margin-bottom:2px}
+.task-meta{font-size:12px;color:#a0a0a0}.task-overdue{color:#cc0000;font-weight:600}
+.urgent-item{padding:12px;background:rgba(204,0,0,0.08);border-left:3px solid #cc0000;border-radius:4px;margin-bottom:10px}.urgent-item:last-child{margin-bottom:0}
+.urgent-label{font-size:11px;font-weight:700;color:#cc0000;text-transform:uppercase;margin-bottom:4px;letter-spacing:0.5px}
 .urgent-title{font-size:14px;color:#fff;font-weight:500;margin-bottom:2px}
 .urgent-desc{font-size:13px;color:#c0c0c0}
-.email-subsection{margin-bottom:18px}
-.email-subsection:last-child{margin-bottom:0}
-.subsection-label{font-size:12px;font-weight:600;color:#cc0000;text-transform:uppercase;margin-bottom:10px;letter-spacing:.5px}
-.email-item{padding:10px;background:#0d0d0d;border-radius:6px;margin-bottom:8px}
-.email-item:last-child{margin-bottom:0}
+.email-subsection{margin-bottom:18px}.email-subsection:last-child{margin-bottom:0}
+.subsection-label{font-size:12px;font-weight:600;color:#cc0000;text-transform:uppercase;margin-bottom:10px;letter-spacing:0.5px}
+.email-item{padding:10px;background:#0d0d0d;border-radius:6px;margin-bottom:8px}.email-item:last-child{margin-bottom:0}
 .email-from{font-size:13px;font-weight:500;color:#fff;margin-bottom:2px}
 .email-subject{font-size:12px;color:#a0a0a0}
-.slack-item{padding:12px;background:#0d0d0d;border-radius:8px;margin-bottom:10px;border-left:2px solid rgba(204,0,0,.2)}
-.slack-item:last-child{margin-bottom:0}
-.slack-channel{font-size:11px;font-weight:600;color:#cc0000;text-transform:uppercase;margin-bottom:4px;letter-spacing:.5px}
+.slack-item{padding:12px;background:#0d0d0d;border-radius:8px;margin-bottom:10px;border-left:2px solid rgba(204,0,0,0.2)}.slack-item:last-child{margin-bottom:0}
+.slack-channel{font-size:11px;font-weight:600;color:#cc0000;text-transform:uppercase;margin-bottom:4px;letter-spacing:0.5px}
 .slack-author{font-size:12px;color:#808080;margin-bottom:4px}
 .slack-message{font-size:13px;color:#c0c0c0;line-height:1.5}
 .footer{text-align:center;padding-top:24px;margin-top:32px;border-top:1px solid #1a1a1a;font-size:12px;color:#808080}
+.status-badge{display:inline-block;padding:2px 8px;background:rgba(204,0,0,0.15);color:#cc0000;font-size:11px;border-radius:3px;font-weight:600}
+.status-high{background:rgba(204,0,0,0.2);color:#dd2222}
 @media(max-width:768px){body{padding:12px}.header{margin-bottom:24px;padding-bottom:16px}.briefing-title{font-size:24px}.section{padding:16px;margin-bottom:16px}.weather-icon{font-size:40px}.weather-temp{font-size:28px}}
 </style>
 </head>
 <body>
-<div class="header"><div class="sephiroth-brand">SEPHIROTH</div><div class="briefing-title">Daily Briefing</div><div class="briefing-date">Tuesday, March 18, 2026</div><div class="briefing-timestamp">Generated at 7:00 AM</div></div>
-<div class="section"><div class="section-title">🌍 Weather</div><div class="weather-container"><div class="weather-icon">⛅</div><div class="weather-info"><div class="weather-temp">18°C</div><div class="weather-desc">Partly cloudy, light breeze from NW</div></div></div></div>
-<div class="section"><div class="section-title">📰 Breaking News</div><div class="news-status">No breaking news at this time. Malta headlines stable.</div></div>
-<div class="section"><div class="section-title">📅 Calendar</div><div class="event"><div class="event-time">10:00 AM</div><div class="event-details"><div class="event-title">1-on-1 with Dylan</div><div class="event-desc">Performance review &amp; Q2 planning</div></div></div><div class="event"><div class="event-time">12:30 PM</div><div class="event-details"><div class="event-title">Lunch Meeting</div><div class="event-desc">Client dinner prep, Luqa location</div></div></div><div class="event"><div class="event-time">2:00 PM</div><div class="event-details"><div class="event-title">Sales Consultation</div><div class="event-desc">Prospect from San Gwann (virtual)</div></div></div></div>
-<div class="section"><div class="section-title">⚡ Power List — Due Today</div><div class="task-item"><div class="task-checkbox"></div><div class="task-content"><div class="task-title">Review Q2 budget submissions</div><div class="task-meta">Asana • <span class="task-overdue">OVERDUE (2 days)</span></div></div></div><div class="task-item"><div class="task-checkbox"></div><div class="task-content"><div class="task-title">Approve new trainer certification (Paola location)</div><div class="task-meta">Asana • Due Today</div></div></div><div class="task-item"><div class="task-checkbox"></div><div class="task-content"><div class="task-title">Update marketing calendar for March launches</div><div class="task-meta">Asana • Due Today</div></div></div></div>
-<div class="section"><div class="section-title">🔴 Urgent &amp; Important</div><div class="urgent-item"><div class="urgent-label">STRATEGIC</div><div class="urgent-title">Evaluate new studio software (Paola location)</div><div class="urgent-desc">Demo scheduled for March 22. Need decision by end of week on integration plan.</div></div><div class="urgent-item"><div class="urgent-label">OPERATIONAL</div><div class="urgent-title">Staffing adjustment for San Gwann (peak hours)</div><div class="urgent-desc">Two trainers unavailable April 1-15. Requires coverage plan + recruitment action.</div></div></div>
-<div class="section"><div class="section-title">📧 Email</div><div class="email-subsection"><div class="subsection-label">Work (Outlook)</div><div class="email-item"><div class="email-from">Dylan Mizrahi</div><div class="email-subject">Q2 Budget — Ready for your review</div></div><div class="email-item"><div class="email-from">Corporate Accounts</div><div class="email-subject">New corporate wellness package inquiry (Luqa HQ)</div></div></div><div class="email-subsection"><div class="subsection-label">Personal (Gmail)</div><div class="email-item"><div class="email-from">Carlin's Calendar</div><div class="email-subject">Reminder: Client dinner March 19 at 19:30</div></div></div></div>
-<div class="section"><div class="section-title">💬 Slack — #ops-daily</div><div class="slack-item"><div class="slack-channel">#ops-daily</div><div class="slack-author">Sarah (Operations Lead, Paola)</div><div class="slack-message">New intake forms streamlined + automated confirmations live. 25% reduction in manual admin time this week.</div></div><div class="slack-item"><div class="slack-channel">#ops-daily</div><div class="slack-author">Marcus (Luqa Manager)</div><div class="slack-message">March membership renewals at 87% (target: 90%). Final push this week—email campaign goes out today.</div></div></div>
-<div class="footer">SEPHIROTH · Chief PA · Fit Stop</div>
+<div class="header"><div class="sephiroth-brand">SEPHIROTH</div><div class="briefing-title">Daily Briefing</div><div class="briefing-date">Thursday, 19 March 2026</div><div class="briefing-timestamp">Generated at 8:52 AM CET</div></div>
+<div class="section"><div class="section-title"><span>🌍</span> Weather — Malta</div><div class="weather-container"><div class="weather-icon">⛅</div><div class="weather-info"><div class="weather-temp">17°C</div><div class="weather-desc">Partly cloudy · High 18°C · Low 11°C · Light breeze · Possible showers</div></div></div></div>
+<div class="section"><div class="section-title"><span>📰</span> Breaking News — Malta</div><div class="news-item"><div class="news-headline">Manoel Island &amp; Fort Tigne returning to public ownership</div><div class="news-summary">PM Robert Abela announces deal reached with MIDI plc for the transfer back to public hands.</div></div><div class="news-item"><div class="news-headline">Russian tanker situation escalating</div><div class="news-summary">PM says letting the vessel's fate be decided by wind and currents cannot continue much longer.</div></div><div class="news-item"><div class="news-headline">Chief Justice appointment reform proposed</div><div class="news-summary">Justice Minister Attard proposes giving the President final say in cases of parliamentary deadlock.</div></div></div>
+<div class="section"><div class="section-title"><span>📅</span> Calendar — Today</div><div class="event"><div class="event-time">3:30 PM</div><div class="event-details"><div class="event-title">Block — Cataleya Show</div><div class="event-desc">Blocked until 8:30 PM (PT calendar)</div></div></div><div class="event"><div class="event-time">4:00 PM</div><div class="event-details"><div class="event-title">Stagecoach Theatre Arts — Performance</div><div class="event-desc">B'Kara 2.00 Class · Theatre Next Door, Maghtab · Students called at 3:50 PM</div></div></div></div>
+<div class="section"><div class="section-title"><span>⚡</span> Power List — Do Today</div><div class="task-item"><div class="task-checkbox"></div><div class="task-content"><div class="task-title">Weekly KPI</div><div class="task-meta"><span class="task-overdue">OVERDUE — Due 17 Mar</span></div></div></div></div>
+<div class="section"><div class="section-title"><span>🔴</span> Urgent &amp; Important</div><div class="urgent-item"><div class="urgent-label"><span class="status-badge status-high">OVERDUE</span></div><div class="urgent-title">Benneja</div><div class="urgent-desc">Due 14 Mar — 5 days overdue</div></div><div class="urgent-item"><div class="urgent-label"><span class="status-badge status-high">OVERDUE</span></div><div class="urgent-title">Fix AI issues</div><div class="urgent-desc">Due 16 Mar — 3 days overdue</div></div><div class="urgent-item"><div class="urgent-label">STRATEGIC</div><div class="urgent-title">Plan IG filming</div><div class="urgent-desc">No due date set</div></div></div>
+<div class="section"><div class="section-title"><span>📧</span> Email</div><div class="email-subsection"><div class="subsection-label">Work (Outlook — ! Carlin)</div><div class="news-status">⚠️ Could not pull Outlook — browser session not active. Check manually.</div></div><div class="email-subsection"><div class="subsection-label">Personal (Gmail)</div><div class="email-item"><div class="email-from">Google Business Profile</div><div class="email-subject">Jedna left a review for Fit Stop Fitness Centre — respond today</div></div><div class="news-status">No other urgent business emails. (Steam receipt, newsletters, promos filtered out.)</div></div></div>
+<div class="section"><div class="section-title"><span>💬</span> Slack — #ops-daily</div><div class="slack-item"><div class="slack-channel">#ops-daily</div><div class="slack-author">Sephiroth</div><div class="slack-message">Jessie's competitor watch list expanded from 5 to 12 — now includes PT studios and coaching businesses. Tiered by threat level. First expanded sweep runs this Saturday.</div></div><div class="slack-item"><div class="slack-channel">#ops-daily</div><div class="slack-author">Carlin</div><div class="slack-message">Shared images and noted upcoming changes — everything is about to change now.</div></div></div>
+<div class="footer"><strong>SEPHIROTH</strong> · Fit Stop Daily Briefing</div>
 </body>
 </html>
