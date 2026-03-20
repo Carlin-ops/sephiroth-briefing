@@ -5,6 +5,91 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Daily Briefing</title>
 <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #000; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; padding: 20px; max-width: 700px; margin: 0 auto; }
+  .header { text-align: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #1a1a1a; }
+  .header h1 { font-size: 1.6rem; font-weight: 700; color: #fff; letter-spacing: 2px; text-transform: uppercase; }
+  .date { font-size: 1.3rem; font-weight: 700; color: #cc0000; margin-top: 8px; }
+  .section { background: #0a0a0a; border-radius: 10px; padding: 20px; margin-bottom: 16px; border: 1px solid #141414; }
+  .section-title { font-size: 0.75rem; font-weight: 700; color: #cc0000; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+  .section p, .section li { font-size: 0.95rem; color: #ccc; }
+  .section ul { list-style: none; padding: 0; }
+  .section ul li { padding: 6px 0; border-bottom: 1px solid #111; }
+  .section ul li:last-child { border-bottom: none; }
+  .task-name { font-weight: 700; color: #fff; }
+  .due { font-style: italic; color: #888; font-size: 0.85rem; }
+  .overdue { color: #cc0000; font-weight: 600; }
+  .time { color: #cc0000; font-weight: 600; font-size: 0.85rem; margin-right: 6px; }
+  .weather-line { color: #aaa; font-size: 0.95rem; }
+  .news-item { color: #ccc; font-size: 0.95rem; margin-bottom: 6px; }
+  .news-headline { font-weight: 700; color: #fff; }
+  .email-sub { font-size: 0.8rem; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 1px; margin-top: 12px; margin-bottom: 6px; }
+  .email-sub:first-child { margin-top: 0; }
+  .footer { text-align: center; padding: 32px 0 16px; font-size: 0.7rem; color: #333; letter-spacing: 3px; text-transform: uppercase; }
+  .flag { display: inline-block; font-size: 0.7rem; font-weight: 700; color: #cc0000; background: rgba(204,0,0,0.1); padding: 2px 8px; border-radius: 4px; margin-left: 6px; }
+  .calendar-event { padding: 8px 0; border-bottom: 1px solid #111; }
+  .calendar-event:last-child { border-bottom: none; }
+  .event-detail { color: #777; font-size: 0.85rem; }
+  .warn { color: #cc0000; font-style: italic; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Daily Briefing</h1>
+  <div class="date">Friday, 20 March 2026</div>
+</div>
+<div class="section">
+  <div class="section-title">Weather — Malta</div>
+  <p class="weather-line">17°C · Partly cloudy · High 18°C / Low 9°C · WNW winds 20kt · No rain expected</p>
+</div>
+<div class="section">
+  <div class="section-title">Breaking News — Malta</div>
+  <p class="news-item"><span class="news-headline">Manoel Island returns to public hands</span> — Government reached agreement with MIDI plc to bring Manoel Island and Fort Tigné concessions back into public ownership.</p>
+  <p class="news-item"><span class="news-headline">Drug trafficking operation</span> — Two men arrested in an international drug importation and trafficking network bust.</p>
+  <p class="news-item">PM Abela co-signed EU letter seeking intervention on drifting Russian vessel safety and environmental risk.</p>
+</div>
+<div class="section">
+  <div class="section-title">Calendar — Today</div>
+  <div class="calendar-event"><span class="time">[09:00–14:00]</span> <span class="task-name">Block — Stay with Cataleya</span><div class="event-detail">No school day. Blocked time.</div></div>
+  <div class="calendar-event"><span class="time">[10:30–11:00]</span> <span class="task-name">Parents' Day — Cataleya</span><div class="event-detail">Ms Rachel, Class K2.3 · Paola Primary</div></div>
+  <div class="calendar-event"><span class="time">[16:00–17:00]</span> <span class="task-name">Cataleya — SweetPeas Gymnastics (FOURPEAS)</span><div class="event-detail">The Hamptons, Attard</div></div>
+  <div class="calendar-event"><span class="time">[17:00–18:00]</span> <span class="task-name">Esmeralda — SweetPeas Gymnastics (TWOPEAS)</span><div class="event-detail">The Hamptons, Attard</div></div>
+</div>
+<div class="section">
+  <div class="section-title">Power List — Do Today</div>
+  <ul>
+    <li><span class="task-name">Set Up Vercel Deploy for Cowork Shareable Links</span> — <span class="due">due today, 20 Mar</span></li>
+    <li><span class="task-name">Weekly KPI</span> — <span class="due overdue">OVERDUE — due 17 Mar</span> <span class="flag">OVERDUE</span></li>
+  </ul>
+</div>
+<div class="section">
+  <div class="section-title">Urgent &amp; Important</div>
+  <ul>
+    <li><span class="task-name">Fix AI issues</span> — <span class="due overdue">OVERDUE — due 16 Mar</span> <span class="flag">OVERDUE</span><div class="event-detail">CRM AI telling leads you offer Pilates + giving wrong pricing. Customer-facing.</div></li>
+    <li><span class="task-name">Benneja</span> — <span class="due overdue">OVERDUE — due 14 Mar</span> <span class="flag">OVERDUE</span><div class="event-detail">Garage roof restructuring quote. Needs new date or re-categorisation.</div></li>
+    <li><span class="task-name">Plan IG filming</span> — <span class="due">no due date</span></li>
+  </ul>
+</div>
+<div class="section">
+  <div class="section-title">Email</div>
+  <div class="email-sub">Work (Outlook — ! Carlin)</div>
+  <p class="warn">Could not pull Outlook — connection timed out. Check manually.</p>
+  <div class="email-sub">Personal (Gmail)</div>
+  <p>No urgent business emails. Inbox is promos and newsletters. Notable: Fortify Meals delivery scheduled today 09:00–11:00 to Cospicua Road. DHL shipment from Military Surplus delivered yesterday.</p>
+</div>
+<div class="section">
+  <div class="section-title">Slack — #ops-daily</div>
+  <p>No operational fires. Last activity (18–19 Mar): Sephiroth posted Materia Library walkthrough for Dylan. Jessie competitor watch list expanded to 12 competitors — no action items surfaced yet.</p>
+</div>
+<div class="footer"><strong>SEPHIROTH</strong> · Fit Stop Daily Briefing</div>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Briefing</title>
+<style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:#000;color:#e0e0e0;line-height:1.6;min-height:100vh;padding:16px}
 .header{text-align:center;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid #1a1a1a}
