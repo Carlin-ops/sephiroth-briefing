@@ -1,148 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Briefing</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #000; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; padding: 20px; max-width: 700px; margin: 0 auto; }
-  .header { text-align: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #1a1a1a; }
-  .header h1 { font-size: 1.6rem; font-weight: 700; color: #fff; letter-spacing: 2px; text-transform: uppercase; }
-  .date { font-size: 1.3rem; font-weight: 700; color: #cc0000; margin-top: 8px; }
-  .section { background: #0a0a0a; border-radius: 10px; padding: 20px; margin-bottom: 16px; border: 1px solid #141414; }
-  .section-title { font-size: 0.75rem; font-weight: 700; color: #cc0000; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
-  .section p, .section li { font-size: 0.95rem; color: #ccc; }
-  .section ul { list-style: none; padding: 0; }
-  .section ul li { padding: 6px 0; border-bottom: 1px solid #111; }
-  .section ul li:last-child { border-bottom: none; }
-  .task-name { font-weight: 700; color: #fff; }
-  .due { font-style: italic; color: #888; font-size: 0.85rem; }
-  .overdue { color: #cc0000; font-weight: 600; }
-  .time { color: #cc0000; font-weight: 600; font-size: 0.85rem; margin-right: 6px; }
-  .weather-line { color: #aaa; font-size: 0.95rem; }
-  .news-item { color: #ccc; font-size: 0.95rem; margin-bottom: 6px; }
-  .news-headline { font-weight: 700; color: #fff; }
-  .email-sub { font-size: 0.8rem; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 1px; margin-top: 12px; margin-bottom: 6px; }
-  .email-sub:first-child { margin-top: 0; }
-  .footer { text-align: center; padding: 32px 0 16px; font-size: 0.7rem; color: #333; letter-spacing: 3px; text-transform: uppercase; }
-  .flag { display: inline-block; font-size: 0.7rem; font-weight: 700; color: #cc0000; background: rgba(204,0,0,0.1); padding: 2px 8px; border-radius: 4px; margin-left: 6px; }
-  .calendar-event { padding: 8px 0; border-bottom: 1px solid #111; }
-  .calendar-event:last-child { border-bottom: none; }
-  .event-detail { color: #777; font-size: 0.85rem; }
-  .warn { color: #cc0000; font-style: italic; font-size: 0.85rem; }
-</style>
-</head>
-<body>
-<div class="header">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Briefing — Saturday, 21 March 2026</title>
+ <style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#000;color:#e0e0e0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;padding:20px;max-width:700px;margin:0 auto}
+  h1{color:#fff;font-size:1.4em;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+  .date{color:#cc0000;font-size:1.3em;font-weight:700;margin-bottom:24px}
+  .section{background:#0a0a0a;border:1px solid #1a1a1a;border-radius:8px;padding:16px;margin-bottom:16px}
+  .section-title{color:#cc0000;font-size:0.85em;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;border-bottom:1px solid #1a1a1a;padding-bottom:6px}
+  .weather-line{color:#999;font-size:0.95em}
+  ul{list-style:none;padding:0}
+  ul li{padding:4px 0;font-size:0.93em}
+  ul li::before{content:"";display:inline}
+  .task-name{font-weight:700;color:#fff}
+  .due{font-style:italic;color:#888;font-size:0.88em}
+  .overdue{color:#cc0000;font-weight:700}
+  .overdue-tag{background:#cc0000;color:#fff;font-size:0.7em;padding:2px 6px;border-radius:3px;margin-left:6px;font-weight:700;text-transform:uppercase}
+  .no-items{color:#666;font-style:italic}
+  .email-sub{color:#999;font-size:0.8em;text-transform:uppercase;letter-spacing:1px;margin-top:10px;margin-bottom:4px;font-weight:600}
+  .email-sub:first-child{margin-top:0}
+  .footer{text-align:center;color:#333;font-size:0.75em;letter-spacing:2px;text-transform:uppercase;margin-top:32px;padding-top:16px;border-top:1px solid #1a1a1a}
+  .news-item{margin-bottom:8px}
+  .news-headline{font-weight:700;color:#fff}
+  .cal-time{color:#cc0000;font-weight:700;margin-right:6px}
+  .section-note{color:#666;font-size:0.82em;margin-top:6px}
+  </style>
+ </head>
+ <body>
+
   <h1>Daily Briefing</h1>
-  <div class="date">Friday, 20 March 2026</div>
-</div>
-<div class="section">
-  <div class="section-title">Weather — Malta</div>
-  <p class="weather-line">17°C · Partly cloudy · High 18°C / Low 9°C · WNW winds 20kt · No rain expected</p>
-</div>
-<div class="section">
-  <div class="section-title">Breaking News — Malta</div>
-  <p class="news-item"><span class="news-headline">Manoel Island returns to public hands</span> — Government reached agreement with MIDI plc to bring Manoel Island and Fort Tigné concessions back into public ownership.</p>
-  <p class="news-item"><span class="news-headline">Drug trafficking operation</span> — Two men arrested in an international drug importation and trafficking network bust.</p>
-  <p class="news-item">PM Abela co-signed EU letter seeking intervention on drifting Russian vessel safety and environmental risk.</p>
-</div>
-<div class="section">
-  <div class="section-title">Calendar — Today</div>
-  <div class="calendar-event"><span class="time">[09:00–14:00]</span> <span class="task-name">Block — Stay with Cataleya</span><div class="event-detail">No school day. Blocked time.</div></div>
-  <div class="calendar-event"><span class="time">[10:30–11:00]</span> <span class="task-name">Parents' Day — Cataleya</span><div class="event-detail">Ms Rachel, Class K2.3 · Paola Primary</div></div>
-  <div class="calendar-event"><span class="time">[16:00–17:00]</span> <span class="task-name">Cataleya — SweetPeas Gymnastics (FOURPEAS)</span><div class="event-detail">The Hamptons, Attard</div></div>
-  <div class="calendar-event"><span class="time">[17:00–18:00]</span> <span class="task-name">Esmeralda — SweetPeas Gymnastics (TWOPEAS)</span><div class="event-detail">The Hamptons, Attard</div></div>
-</div>
-<div class="section">
-  <div class="section-title">Power List — Do Today</div>
-  <ul>
-    <li><span class="task-name">Set Up Vercel Deploy for Cowork Shareable Links</span> — <span class="due">due today, 20 Mar</span></li>
-    <li><span class="task-name">Weekly KPI</span> — <span class="due overdue">OVERDUE — due 17 Mar</span> <span class="flag">OVERDUE</span></li>
-  </ul>
-</div>
-<div class="section">
-  <div class="section-title">Urgent &amp; Important</div>
-  <ul>
-    <li><span class="task-name">Fix AI issues</span> — <span class="due overdue">OVERDUE — due 16 Mar</span> <span class="flag">OVERDUE</span><div class="event-detail">CRM AI telling leads you offer Pilates + giving wrong pricing. Customer-facing.</div></li>
-    <li><span class="task-name">Benneja</span> — <span class="due overdue">OVERDUE — due 14 Mar</span> <span class="flag">OVERDUE</span><div class="event-detail">Garage roof restructuring quote. Needs new date or re-categorisation.</div></li>
-    <li><span class="task-name">Plan IG filming</span> — <span class="due">no due date</span></li>
-  </ul>
-</div>
-<div class="section">
-  <div class="section-title">Email</div>
-  <div class="email-sub">Work (Outlook — ! Carlin)</div>
-  <p class="warn">Could not pull Outlook — connection timed out. Check manually.</p>
-  <div class="email-sub">Personal (Gmail)</div>
-  <p>No urgent business emails. Inbox is promos and newsletters. Notable: Fortify Meals delivery scheduled today 09:00–11:00 to Cospicua Road. DHL shipment from Military Surplus delivered yesterday.</p>
-</div>
-<div class="section">
-  <div class="section-title">Slack — #ops-daily</div>
-  <p>No operational fires. Last activity (18–19 Mar): Sephiroth posted Materia Library walkthrough for Dylan. Jessie competitor watch list expanded to 12 competitors — no action items surfaced yet.</p>
-</div>
-<div class="footer"><strong>SEPHIROTH</strong> · Fit Stop Daily Briefing</div>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Briefing</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:#000;color:#e0e0e0;line-height:1.6;min-height:100vh;padding:16px}
-.header{text-align:center;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid #1a1a1a}
-.sephiroth-brand{font-size:12px;font-weight:700;letter-spacing:2px;color:#cc0000;text-transform:uppercase;margin-bottom:8px}
-.briefing-title{font-size:28px;font-weight:700;color:#fff;margin-bottom:8px}
-.briefing-date{font-size:20px;font-weight:600;color:#cc0000;margin-bottom:6px;letter-spacing:1px}
-.briefing-timestamp{font-size:12px;color:#808080;font-style:italic}
-.section{background:#0a0a0a;border:1px solid #1a1a1a;border-radius:12px;padding:20px;margin-bottom:20px}
-.section-title{font-size:14px;font-weight:700;letter-spacing:1px;color:#cc0000;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}
-.weather-container{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.weather-icon{font-size:48px}.weather-info{flex:1}
-.weather-temp{font-size:32px;font-weight:700;color:#fff;line-height:1;margin-bottom:4px}
-.weather-desc{font-size:14px;color:#a0a0a0}
-.news-item{padding:12px 0;border-bottom:1px solid #111}.news-item:last-child{border-bottom:none}
-.news-headline{font-size:14px;color:#fff;font-weight:600;margin-bottom:4px}
-.news-summary{font-size:13px;color:#a0a0a0}
-.news-status{font-size:12px;color:#888;font-style:italic}
-.event{display:flex;gap:12px;padding:12px 0;border-left:2px solid #cc0000;padding-left:12px;margin-bottom:12px}.event:last-child{margin-bottom:0}
-.event-time{font-size:13px;font-weight:600;color:#cc0000;min-width:70px}
-.event-details{flex:1}.event-title{font-size:14px;color:#fff;font-weight:500;margin-bottom:2px}
-.event-desc{font-size:12px;color:#a0a0a0}
-.task-item{display:flex;align-items:flex-start;gap:12px;padding:12px;background:#0d0d0d;border-radius:8px;margin-bottom:10px}.task-item:last-child{margin-bottom:0}
-.task-checkbox{width:20px;height:20px;border:2px solid rgba(204,0,0,0.5);border-radius:4px;flex-shrink:0;margin-top:2px}
-.task-content{flex:1}.task-title{font-size:14px;color:#fff;margin-bottom:2px}
-.task-meta{font-size:12px;color:#a0a0a0}.task-overdue{color:#cc0000;font-weight:600}
-.urgent-item{padding:12px;background:rgba(204,0,0,0.08);border-left:3px solid #cc0000;border-radius:4px;margin-bottom:10px}.urgent-item:last-child{margin-bottom:0}
-.urgent-label{font-size:11px;font-weight:700;color:#cc0000;text-transform:uppercase;margin-bottom:4px;letter-spacing:0.5px}
-.urgent-title{font-size:14px;color:#fff;font-weight:500;margin-bottom:2px}
-.urgent-desc{font-size:13px;color:#c0c0c0}
-.email-subsection{margin-bottom:18px}.email-subsection:last-child{margin-bottom:0}
-.subsection-label{font-size:12px;font-weight:600;color:#cc0000;text-transform:uppercase;margin-bottom:10px;letter-spacing:0.5px}
-.email-item{padding:10px;background:#0d0d0d;border-radius:6px;margin-bottom:8px}.email-item:last-child{margin-bottom:0}
-.email-from{font-size:13px;font-weight:500;color:#fff;margin-bottom:2px}
-.email-subject{font-size:12px;color:#a0a0a0}
-.slack-item{padding:12px;background:#0d0d0d;border-radius:8px;margin-bottom:10px;border-left:2px solid rgba(204,0,0,0.2)}.slack-item:last-child{margin-bottom:0}
-.slack-channel{font-size:11px;font-weight:600;color:#cc0000;text-transform:uppercase;margin-bottom:4px;letter-spacing:0.5px}
-.slack-author{font-size:12px;color:#808080;margin-bottom:4px}
-.slack-message{font-size:13px;color:#c0c0c0;line-height:1.5}
-.footer{text-align:center;padding-top:24px;margin-top:32px;border-top:1px solid #1a1a1a;font-size:12px;color:#808080}
-.status-badge{display:inline-block;padding:2px 8px;background:rgba(204,0,0,0.15);color:#cc0000;font-size:11px;border-radius:3px;font-weight:600}
-.status-high{background:rgba(204,0,0,0.2);color:#dd2222}
-@media(max-width:768px){body{padding:12px}.header{margin-bottom:24px;padding-bottom:16px}.briefing-title{font-size:24px}.section{padding:16px;margin-bottom:16px}.weather-icon{font-size:40px}.weather-temp{font-size:28px}}
-</style>
-</head>
-<body>
-<div class="header"><div class="sephiroth-brand">SEPHIROTH</div><div class="briefing-title">Daily Briefing</div><div class="briefing-date">Thursday, 19 March 2026</div><div class="briefing-timestamp">Generated at 8:52 AM CET</div></div>
-<div class="section"><div class="section-title"><span>🌍</span> Weather — Malta</div><div class="weather-container"><div class="weather-icon">⛅</div><div class="weather-info"><div class="weather-temp">17°C</div><div class="weather-desc">Partly cloudy · High 18°C · Low 11°C · Light breeze · Possible showers</div></div></div></div>
-<div class="section"><div class="section-title"><span>📰</span> Breaking News — Malta</div><div class="news-item"><div class="news-headline">Manoel Island &amp; Fort Tigne returning to public ownership</div><div class="news-summary">PM Robert Abela announces deal reached with MIDI plc for the transfer back to public hands.</div></div><div class="news-item"><div class="news-headline">Russian tanker situation escalating</div><div class="news-summary">PM says letting the vessel's fate be decided by wind and currents cannot continue much longer.</div></div><div class="news-item"><div class="news-headline">Chief Justice appointment reform proposed</div><div class="news-summary">Justice Minister Attard proposes giving the President final say in cases of parliamentary deadlock.</div></div></div>
-<div class="section"><div class="section-title"><span>📅</span> Calendar — Today</div><div class="event"><div class="event-time">3:30 PM</div><div class="event-details"><div class="event-title">Block — Cataleya Show</div><div class="event-desc">Blocked until 8:30 PM (PT calendar)</div></div></div><div class="event"><div class="event-time">4:00 PM</div><div class="event-details"><div class="event-title">Stagecoach Theatre Arts — Performance</div><div class="event-desc">B'Kara 2.00 Class · Theatre Next Door, Maghtab · Students called at 3:50 PM</div></div></div></div>
-<div class="section"><div class="section-title"><span>⚡</span> Power List — Do Today</div><div class="task-item"><div class="task-checkbox"></div><div class="task-content"><div class="task-title">Weekly KPI</div><div class="task-meta"><span class="task-overdue">OVERDUE — Due 17 Mar</span></div></div></div></div>
-<div class="section"><div class="section-title"><span>🔴</span> Urgent &amp; Important</div><div class="urgent-item"><div class="urgent-label"><span class="status-badge status-high">OVERDUE</span></div><div class="urgent-title">Benneja</div><div class="urgent-desc">Due 14 Mar — 5 days overdue</div></div><div class="urgent-item"><div class="urgent-label"><span class="status-badge status-high">OVERDUE</span></div><div class="urgent-title">Fix AI issues</div><div class="urgent-desc">Due 16 Mar — 3 days overdue</div></div><div class="urgent-item"><div class="urgent-label">STRATEGIC</div><div class="urgent-title">Plan IG filming</div><div class="urgent-desc">No due date set</div></div></div>
-<div class="section"><div class="section-title"><span>📧</span> Email</div><div class="email-subsection"><div class="subsection-label">Work (Outlook — ! Carlin)</div><div class="news-status">⚠️ Could not pull Outlook — browser session not active. Check manually.</div></div><div class="email-subsection"><div class="subsection-label">Personal (Gmail)</div><div class="email-item"><div class="email-from">Google Business Profile</div><div class="email-subject">Jedna left a review for Fit Stop Fitness Centre — respond today</div></div><div class="news-status">No other urgent business emails. (Steam receipt, newsletters, promos filtered out.)</div></div></div>
-<div class="section"><div class="section-title"><span>💬</span> Slack — #ops-daily</div><div class="slack-item"><div class="slack-channel">#ops-daily</div><div class="slack-author">Sephiroth</div><div class="slack-message">Jessie's competitor watch list expanded from 5 to 12 — now includes PT studios and coaching businesses. Tiered by threat level. First expanded sweep runs this Saturday.</div></div><div class="slack-item"><div class="slack-channel">#ops-daily</div><div class="slack-author">Carlin</div><div class="slack-message">Shared images and noted upcoming changes — everything is about to change now.</div></div></div>
-<div class="footer"><strong>SEPHIROTH</strong> · Fit Stop Daily Briefing</div>
-</body>
-</html>
+ <div class="date">Saturday, 21 March 2026</div>div>
+ 
+ <div class="section">
+ <div class="section-title">Weather — Malta</div>div>
+ <div class="weather-line">12–16°C · Partly cloudy, chance of isolated afternoon showers · Wind ENE Force 3 · Sunrise 06:04 / Sunset 18:14</div>div>
+ </div>div>
+ 
+ <div class="section">
+ <div class="section-title">Breaking News — Malta</div>div>
+ <div class="news-item"><span class="news-headline">Malta Gaming Authority cyber breach</span>span> — German hacker claims responsibility, alleges sensitive data shared with media.</div>div>
+ <div class="news-item"><span class="news-headline">Tanker drifting toward Malta</span>span> — Vessel 30 miles east of Linosa, PM Abela says situation cannot continue.</div>div>
+ <div class="news-item"><span class="news-headline">Abortion pill prosecution fears</span>span> — PM voices concern over women avoiding medical care due to fear of prosecution.</div>div>
+ </div>div>
+ 
+ <div class="section">
+ <div class="section-title">Calendar — Today</div>div>
+ <ul>
+  <li><span class="cal-time">[13:30]</span>span> <span class="task-name">Ritianne Ellul</span>span> — Sales consult, Paola</li>
+ <li><span class="cal-time">[14:00]</span>span> <span class="task-name">Sandro Vella</span>span> — Sales consult, Paola</li>
+ <li><span class="cal-time">[14:30]</span>span> <span class="task-name">Natasha Micallef</span>span> — Sales consult, Paola</li>
+ </ul>
+ <div class="section-note">Saturday working day — 3 back-to-back consults at Paola this afternoon.</div>div>
+ </div>div>
+ 
+ <div class="section">
+ <div class="section-title">Power List — Do Today</div>div>
+ <ul>
+ <li><span class="task-name">Plan IG filming</span>span> — <span class="due">due tomorrow, 22 Mar</span>span></li>
+ <li><span class="task-name">Weekly KPI</span>span> — <span class="due">due 23 Mar</span>span></li>
+ </ul>
+ <div class="section-note">No Power List tasks due today. Tomorrow's IG filming prep is your nearest deadline.</div>div>
+ </div>div>
+ 
+ <div class="section">
+ <div class="section-title">Urgent &amp; Important</div>div>
+ <ul>
+ <li><span class="task-name">Carlin calling the maison today for a quote</span>span> <span class="overdue-tag">Overdue</span>span> — <span class="overdue">due 20 Mar</span>span></li>
+ <li><span class="task-name">Fix AI issues</span>span> <span class="overdue-tag">Overdue</span>span> — <span class="overdue">due 20 Mar</span>span></li>
+ <li><span class="task-name">Robbie Leadership Decision — Meeting with Kirk &amp; Dylan</span>span> — <span class="due">due 23 Mar</span>span></li>
+ <li><span class="task-name">Luqa meeting Kirk and Dylan</span>span> — <span class="due">due 23 Mar</span>span></li>
+ </ul>
+ <div class="section-note">2 overdue items need resolution. Robbie decision meeting is Monday — Tifa's full assessment was posted to #ops-daily today.</div>div>
+ </div>div>
+ 
+ <div class="section">
+ <div class="section-title">Email</div>div>
+ <div class="email-sub">Work (Outlook — ! Carlin)</div>div>
+ <div class="no-items">Could not pull Outlook — browser-only access, no active session. Check manually.</div>div>
+ <div class="email-sub">Personal (Gmail)</div>div>
+ <div class="no-items">No urgent business emails. Newsletters, promos, and a GymStars calendar update for the kids.</div>div>
+ </div>div>
+ 
+ <div class="section">
+ <div class="section-title">Slack — #ops-daily</div>div>
+ <ul>
+ <li><span class="task-name">Tifa posted Robbie assessment</span>span> — Full employee analysis shared with Dylan. Strengths: genuine ambition, disclosed competing offer. Gaps: emotional regulation, close rate (28.6%), picks friendships over standards. Key insight: no development path given after leadership application denial 3 months ago.</li>
+ <li><span class="task-name">Jessie competitor intel</span>span> — Sky Spirit Fitness (Luqa) gained HYROX Affiliated Gym status and appointed new Ops Manager (Kirsten Axiaq, internal promotion after 7 years). Getting sharper in Kirk's territory.</li>
+ <li><span class="task-name">Dylan confirmed today's consults</span>span> — Paola consults confirmed for Saturday.</li>
+ </ul>
+ </div>div>
+ 
+ <div class="footer">SEPHIROTH · Fit Stop Daily Briefing</div>div>
+ 
+ </body>
+</html>html></li></li>
+ </ul></h1>
+ </body>
+ </style></title>
+ </head>
