@@ -3,105 +3,102 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Briefing — Monday, 23 March 2026</title>
+<title>Daily Briefing — 24 March 2026</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #000; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; padding: 20px; max-width: 700px; margin: 0 auto; }
-  h1 { color: #fff; font-size: 1.8rem; font-weight: 700; margin-bottom: 4px; }
-  .date { color: #cc0000; font-size: 1.3rem; font-weight: 700; margin-bottom: 24px; }
-  .section { background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
-  .section-title { color: #cc0000; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; }
-  .divider { border: none; border-top: 1px solid #1a1a1a; margin: 16px 0; }
-  ul { list-style: none; padding: 0; }
-  ul li { padding: 6px 0; border-bottom: 1px solid #111; }
-  ul li:last-child { border-bottom: none; }
-  .task-name { color: #fff; font-weight: 600; }
-  .due { color: #888; font-style: italic; font-size: 0.9rem; }
-  .overdue { color: #cc0000; font-weight: 600; }
-  .time { color: #cc0000; font-weight: 600; margin-right: 6px; }
-  .weather-line { color: #ccc; font-size: 0.95rem; }
-  .news-item { margin-bottom: 8px; }
-  .news-headline { color: #fff; font-weight: 600; }
-  .sub-label { color: #666; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 10px; margin-bottom: 6px; }
-  .footer { text-align: center; color: #333; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; margin-top: 32px; padding-top: 16px; border-top: 1px solid #1a1a1a; }
-  .flag { display: inline-block; background: #cc0000; color: #fff; font-size: 0.7rem; padding: 1px 6px; border-radius: 3px; margin-left: 6px; font-weight: 600; }
-  .note { color: #888; font-size: 0.9rem; }
-  a { color: #cc0000; text-decoration: none; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#fff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;padding:20px;max-width:700px;margin:0 auto}
+h1{font-size:1.8rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:4px}
+.date{font-size:1.3rem;font-weight:700;color:#cc0000;margin-bottom:30px}
+.section{background:#0a0a0a;border-radius:10px;padding:18px 20px;margin-bottom:16px;border:1px solid #1a1a1a}
+.section-title{font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#cc0000;margin-bottom:10px}
+.weather-line{color:#ccc;font-size:.95rem}
+p{color:#ddd;font-size:.95rem;margin-bottom:8px}
+ul{list-style:none;padding:0}
+ul li{color:#ddd;font-size:.95rem;margin-bottom:8px;padding-left:14px;position:relative}
+ul li:before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;background:#cc0000;border-radius:50%}
+.overdue{color:#cc0000;font-weight:600}
+.task-name{font-weight:600;color:#fff}
+.due-date{font-style:italic;color:#888}
+.divider{height:1px;background:#1a1a1a;margin:16px 0}
+.footer{text-align:center;margin-top:40px;padding:20px 0;border-top:1px solid #1a1a1a}
+.footer-text{font-size:.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#444}
+.calendar-time{color:#cc0000;font-weight:600;margin-right:6px}
+.tag-overdue{background:#cc0000;color:#fff;font-size:.7rem;font-weight:700;padding:2px 6px;border-radius:3px;margin-left:6px;text-transform:uppercase}
+.news-headline{font-weight:600;color:#fff}
 </style>
 </head>
 <body>
 
 <h1>Daily Briefing</h1>
-<div class="date">Monday, 23 March 2026</div>
+<div class="date">Tuesday, 24 March 2026</div>
 
 <!-- WEATHER -->
 <div class="section">
-  <div class="section-title">Weather — Malta</div>
-  <div class="weather-line">16°C · Mild and dry · High 16° / Low 13° · Light winds · No rain expected</div>
+<div class="section-title">Weather — Malta</div>
+<div class="weather-line">17°C · Partly cloudy · High 17°C / Low 10°C · WNW winds 20 knots · No rain expected</div>
 </div>
 
 <!-- NEWS -->
 <div class="section">
-  <div class="section-title">Breaking News — Malta</div>
-  <div class="news-item"><span class="news-headline">Tanker drifting toward Malta</span> — A tanker 30 miles east of Linosa is slowly drifting toward Malta. PM Abela has voiced concerns and is monitoring the situation.</div>
-  <div class="news-item"><span class="news-headline">Cyber breach at Malta Gaming Authority</span> — A German hacker claims responsibility, alleging sensitive data has been obtained and shared with media.</div>
-  <div class="news-item"><span class="news-headline">Government debt hits €11.4B</span> — Central Government debt increased by €509M compared to 2025, reaching €11,444.6M at end of February 2026.</div>
+<div class="section-title">Breaking News — Malta</div>
+<p><span class="news-headline">Drifting tanker approaching Maltese waters</span> — PM Abela says the situation of letting wind and currents decide the vessel's fate cannot go on much longer. The tanker is approximately 30 miles east of Linosa in international waters, slowly drifting toward Malta.</p>
+<p><span class="news-headline">Election preparations underway</span> — Both Labour and Nationalist Party are finalising candidate lists as the general election approaches. Neither party has released its final lineup.</p>
+<p><span class="news-headline">Government debt hits record</span> — Central Government debt reached 11.4 billion euros at end of February 2026, up 509 million from 2025.</p>
 </div>
 
 <!-- CALENDAR -->
 <div class="section">
-  <div class="section-title">Calendar — Today</div>
-  <ul>
-    <li><span class="time">09:00–12:30</span> Filming</li>
-    <li><span class="time">13:00–13:30</span> Meeting Kirk, Dylan — Robbie leadership decision</li>
-    <li><span class="time">18:30–19:00</span> Nicole Schembri — Sales consult</li>
-  </ul>
+<div class="section-title">Calendar — Today</div>
+<ul>
+<li><span class="calendar-time">[01:00]</span> AI Growth Factor Q and A — Zoom with Kieran Duffy (already occurred overnight)</li>
+<li><span class="calendar-time">[14:00–20:00]</span> Kids — Tuesday afternoon off</li>
+</ul>
+<p style="color:#888;font-size:.85rem;margin-top:6px">No PT sessions scheduled today.</p>
 </div>
 
 <!-- POWER LIST -->
 <div class="section">
-  <div class="section-title">Power List — Do Today</div>
-  <ul>
-    <li><span class="task-name">Robbie Leadership Decision — Meeting with Kirk &amp; Dylan</span> <span class="due">due today</span></li>
-    <li><span class="task-name">Follow up with electrician</span> <span class="due">due today</span> — Call</li>
-    <li><span class="task-name">Hand Dylan Performance Review PDF to Sephiroth</span> <span class="due">due today</span></li>
-    <li><span class="task-name">Check Melita bills / compare with Go</span> <span class="due">due today</span></li>
-    <li><span class="task-name">Install GWS CLI + Marketing Skills + Wedge Gmail Cleanup</span> <span class="due">due today</span></li>
-    <li><span class="task-name">Francelle Ellul cancellation</span> <span class="due">due today</span></li>
-    <li><span class="task-name">Erica health insurance</span> <span class="due">due today</span></li>
-    <li><span class="task-name">Filming IG</span> <span class="due">no due date</span></li>
-    <li><span class="task-name">Weekly KPI</span> <span class="due">due today</span></li>
-  </ul>
-  <div class="sub-label" style="margin-top: 12px;">Upcoming</div>
-  <ul>
-    <li><span class="task-name">Tifa Phase 4 Roadmap — HR System Build</span> <span class="due">due Mar 30</span></li>
-  </ul>
+<div class="section-title">Power List — Do Today</div>
+<ul>
+<li><span class="task-name">Fix AI issues</span> — <span class="due-date">due today</span></li>
+<li><span class="task-name">Buy TRX + bands, barbell cushion set San Gwann</span> — <span class="due-date">due today</span></li>
+</ul>
+<div class="divider"></div>
+<p class="overdue" style="font-size:.85rem;margin-bottom:6px">OVERDUE</p>
+<ul>
+<li><span class="task-name overdue">Install GWS CLI + Marketing Skills on Desktop + Wedge Gmail Cleanup</span> — <span class="due-date">was due Mar 23</span><span class="tag-overdue">1 day overdue</span></li>
+<li><span class="task-name overdue">Weekly KPI</span> — <span class="due-date">was due Mar 23</span><span class="tag-overdue">1 day overdue</span></li>
+</ul>
 </div>
 
-<!-- URGENT & IMPORTANT -->
+<!-- URGENT and IMPORTANT -->
 <div class="section">
-  <div class="section-title">Urgent &amp; Important</div>
-  <ul>
-    <li><span class="task-name">Fix AI issues</span> <span class="due">due Mar 24</span></li>
-  </ul>
+<div class="section-title">Urgent and Important</div>
+<ul>
+<li><span class="task-name">Robbie Meeting — Deliver Decision (with Kirk)</span> — <span class="due-date">due Mar 25</span>. Full meeting structure prepped by Tifa. Tomorrow.</li>
+<li><span class="task-name">Tifa Phase 4 Roadmap — HR System Build</span> — <span class="due-date">due Mar 30</span>. Arieth flagged subtasks are still empty for the second night. No execution path without them.</li>
+</ul>
 </div>
 
 <!-- EMAIL -->
 <div class="section">
-  <div class="section-title">Email</div>
-  <div class="sub-label">Work — Outlook (! Carlin)</div>
-  <p class="note">Folder is clear. No items triaged by VA.</p>
-  <div class="sub-label" style="margin-top: 12px;">Personal — Gmail</div>
-  <p class="note">No urgent business emails. Fortify Meals delivery arriving today 09:00–11:00 (overlaps with filming).</p>
+<div class="section-title">Email</div>
+<p style="font-weight:600;color:#cc0000;font-size:.8rem;margin-bottom:8px">WORK (OUTLOOK)</p>
+<p>Could not pull Outlook — browser session required. Check ! Carlin folder manually.</p>
+<div class="divider"></div>
+<p style="font-weight:600;color:#cc0000;font-size:.8rem;margin-bottom:8px">PERSONAL (GMAIL)</p>
+<p>No urgent business emails. Inbox is newsletters, promos, and notifications. Notable: Fortify Meals delivery confirmed for today (1–3 PM), Dan Martell newsletter landed, Facebook security codes (x2).</p>
 </div>
 
 <!-- SLACK -->
 <div class="section">
-  <div class="section-title">Slack — #ops-daily</div>
-  <p>Last activity was Friday March 20. Dylan confirmed he's off today (Monday). Tifa posted a detailed Robbie assessment on Friday — strengths (ambition is real, disclosed hotel offer), gaps (emotional regulation, close rate at 28.6%, picks friendships over standards), and a flag that we gave him zero development path after denying his leadership application 3 months ago. Sephiroth shared Jessie's intel: Sky Spirit Fitness (Luqa) gained HYROX Affiliated Gym status and appointed a new Ops Manager.</p>
+<div class="section-title">Slack — #ops-daily</div>
+<p>Carlin and Dylan chatting this morning about AI and marketing tasks. Carlin mentioned waking up to find plans ready — noted that Arieth had handed research to Jessie overnight. Discussion about marketing brainstorm for Ozempic clients and competitor ad research. Dylan reacted with surprise at how much gets done while Carlin sleeps.</p>
 </div>
 
-<div class="footer"><strong>SEPHIROTH</strong> · Fit Stop Daily Briefing</div>
+<div class="footer">
+<div class="footer-text">Sephiroth · Fit Stop Daily Briefing</div>
+</div>
 
 </body>
 </html>
