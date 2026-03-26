@@ -5,136 +5,102 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Daily Briefing — Sephiroth</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#000;color:#e0e0e0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;padding:16px;max-width:700px;margin:0 auto}
-h1{color:#fff;font-size:1.4rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
-.date{color:#cc0000;font-size:1.5rem;font-weight:800;margin-bottom:24px}
-.section{background:#0a0a0a;border-radius:10px;padding:16px;margin-bottom:16px;border:1px solid #1a1a1a}
-.section-title{color:#cc0000;font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px}
-.weather-line{color:#999;font-size:.9rem}
-ul{list-style:none;padding:0}
-ul li{padding:6px 0;border-bottom:1px solid #111}
-ul li:last-child{border-bottom:none}
-.task-name{color:#fff;font-weight:600}
-.due{color:#777;font-style:italic;font-size:.85rem}
-.overdue{color:#cc0000;font-weight:600}
-.overdue-tag{background:#cc0000;color:#fff;font-size:.7rem;padding:2px 6px;border-radius:3px;margin-left:6px;font-weight:700}
-.news-item{margin-bottom:8px}
-.news-headline{color:#fff;font-weight:600}
-.news-summary{color:#999;font-size:.9rem}
-.email-sub{color:#888;font-size:.8rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;margin-top:10px;font-weight:600}
-.email-sub:first-child{margin-top:0}
-.slack-summary{color:#ccc;font-size:.9rem}
-.calendar-time{color:#cc0000;font-weight:700;font-size:.9rem}
-.calendar-event{color:#fff;font-weight:500}
-.calendar-detail{color:#777;font-size:.85rem}
-.alert-item{color:#ffcc00;font-size:.85rem;margin-top:4px}
-.footer{text-align:center;color:#333;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;margin-top:32px;padding-top:16px;border-top:1px solid #1a1a1a}
-.consult-block{margin-top:8px;padding-top:8px;border-top:1px solid #1a1a1a}
-.consult-label{color:#888;font-size:.75rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #000; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; padding: 20px; max-width: 700px; margin: 0 auto; }
+h1 { color: #fff; font-size: 1.8em; font-weight: 700; margin-bottom: 4px; }
+.date { color: #cc0000; font-size: 1.3em; font-weight: 700; margin-bottom: 24px; }
+.section { background: #0a0a0a; border-radius: 10px; padding: 18px 16px; margin-bottom: 16px; border: 1px solid #1a1a1a; }
+.section-title { color: #cc0000; font-size: 1.05em; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+.divider { border: none; border-top: 1px solid #1a1a1a; margin: 16px 0; }
+ul { list-style: none; padding: 0; }
+ul li { padding: 6px 0; border-bottom: 1px solid #111; }
+ul li:last-child { border-bottom: none; }
+.task-name { font-weight: 700; color: #fff; }
+.due { font-style: italic; color: #888; }
+.overdue { color: #cc0000; font-weight: 700; }
+.time { color: #cc0000; font-weight: 600; }
+.muted { color: #666; }
+.highlight { color: #fff; }
+.consult-tag { background: #cc0000; color: #fff; font-size: 0.75em; padding: 2px 6px; border-radius: 4px; font-weight: 600; margin-left: 6px; }
+footer { text-align: center; padding: 30px 0 10px; color: #333; font-size: 0.85em; letter-spacing: 2px; font-weight: 600; }
 </style>
 </head>
 <body>
 
 <h1>Daily Briefing</h1>
-<div class="date">Wednesday, 25 March 2026</div>
+<div class="date">Thursday, 26 March 2026</div>
 
 <div class="section">
 <div class="section-title">Weather — Malta</div>
-<div class="weather-line">17°C · Mild & partly cloudy · High 17° / Low 11° · Light winds · Low rain chance</div>
+16°C · Partly cloudy · High 17° / Low 10° · Light breeze · Chance of rain later
 </div>
 
 <div class="section">
 <div class="section-title">Breaking News — Malta</div>
-<div class="news-item">
-<div class="news-headline">PM Abela in contact with families of Maltese soldiers in Lebanon</div>
-<div class="news-summary">Amid UN peacekeeping mission uncertainty. Foreign Minister Borg notes the regional situation remains unpredictable.</div>
-</div>
-<div class="news-item">
-<div class="news-headline">Drifting tanker near Malta raises environmental concerns</div>
-<div class="news-summary">PM says the situation of the vessel being at the mercy of wind and currents cannot continue much longer.</div>
-</div>
-<div class="news-item">
-<div class="news-headline">Abortion pill prosecution fears — policy change floated</div>
-<div class="news-summary">Abela voiced concern over women not seeking medical care. Potential Cabinet petition for suspended sentences.</div>
-</div>
-<div class="news-item">
-<div class="news-headline">Katy Perry to headline Isle of MTV Malta — 22 July</div>
-<div class="news-summary">Annual open-air concert at Floriana Granaries.</div>
-</div>
+No major breaking news today. Gozo officially launched its year as European Region of Gastronomy. PM Abela remains in contact with families of Maltese soldiers in the UN Lebanon peacekeeping mission. A stranded tanker situation off Malta remains unresolved — the PM said the current drift situation “cannot go on much longer.”
 </div>
 
 <div class="section">
 <div class="section-title">Calendar — Today</div>
 <ul>
-<li><span class="calendar-time">10:00</span> — <span class="calendar-event">Youth Scheme Ministry Meeting</span></li>
-<li><span class="calendar-time">11:00</span> — <span class="calendar-event">Management Meeting</span> <span class="calendar-detail">(weekly with Dylan)</span></li>
-<li><span class="calendar-time">13:00</span> — <span class="calendar-event">Robbie Meeting</span> <span class="calendar-detail">— deliver decision with Kirk</span></li>
-<li class="consult-block">
-<div class="consult-label">Sales Consults — Paola</div>
-</li>
-<li><span class="calendar-time">16:00</span> — <span class="calendar-event">Rachel Mallia</span></li>
-<li><span class="calendar-time">16:30</span> — <span class="calendar-event">Michael Delmar</span></li>
-<li><span class="calendar-time">17:00</span> — <span class="calendar-event">Ingrid Borg</span></li>
-<li><span class="calendar-time">17:30</span> — <span class="calendar-event">Daniel Duca</span></li>
+<li><span class="time">[01:00]</span> AI Growth Factor Q&amp;A · Zoom with Kieran Duffy <span class="muted">(overnight — already passed)</span></li>
+<li><span class="time">[13:00–15:00]</span> Fortify Meals delivery window · 29 Cospicua Road</li>
+<li><span class="time">[16:00]</span> <span class="task-name">Alice Abela</span> · PT session</li>
+<li><span class="time">[16:30]</span> <span class="task-name">Sylvia Agius</span> · PT session · Paola</li>
+<li><span class="time">[17:30]</span> <span class="task-name">Albert Benjamin</span> · Free Consultation · San Gwann <span class="consult-tag">CONSULT</span></li>
+<li><span class="time">[18:00]</span> <span class="task-name">Nina Gerna</span> · PT session · Paola</li>
 </ul>
 </div>
 
 <div class="section">
 <div class="section-title">Power List — Do Today</div>
 <ul>
-<li><span class="task-name">Contact follow-up</span> <span class="due">— due today</span></li>
-<li><span class="task-name">Manager Weekly Meeting</span> <span class="due">— due today (11:00 on calendar)</span></li>
-<li><span class="task-name">Build GoHighLevel conversation monitoring</span> <span class="due">— due today</span></li>
-<li><span class="task-name">Financial reconciliation task</span> <span class="due">— due today</span></li>
-<li><span class="task-name">Leadership programme</span> <span class="due">— due today</span></li>
-<li><span class="task-name">Explore Gamma Connector for Visual Dashboards</span> <span class="due">— due today</span></li>
-<li><span class="task-name">Pay architect</span> <span class="due">— due today</span></li>
-<li><span class="task-name">Barbara request</span> <span class="due">— due today (documents needed by Friday)</span></li>
-<li><span class="task-name">Robbie Meeting — Deliver Decision (with Kirk)</span> <span class="due">— due today (13:00 on calendar)</span></li>
+<li><span class="task-name">Dylan: SPC Action Tracker — brief staff</span> · <span class="overdue">OVERDUE — was due today but flagged overdue in Asana</span></li>
+<li><span class="task-name">Trainerize reports</span> · <span class="due">due today</span> — Ingrid, partner, Daniel Luca</li>
+<li><span class="task-name">Send partimers email to accountant</span> · <span class="due">due today</span></li>
+<li><span class="task-name">Reupload AI doc for San Gwann booking error</span> · <span class="due">due today</span></li>
 </ul>
-<div style="margin-top:12px;padding-top:10px;border-top:1px solid #1a1a1a">
-<div class="overdue" style="font-size:.8rem;margin-bottom:6px">OVERDUE</div>
+<hr class="divider">
+<div style="color: #cc0000; font-weight: 600; margin-bottom: 8px;">OVERDUE</div>
 <ul>
-<li><span class="task-name">Fix AI issues</span> <span class="overdue-tag">1 day overdue</span> <span class="due">— blocked waiting on Kieran</span></li>
-<li><span class="task-name">Buy TRX + bands, barbell cushion set San Gwann</span> <span class="overdue-tag">1 day overdue</span> <span class="due">— was Delegate for Marko (on leave)</span></li>
+<li><span class="task-name">Manager Weekly meeting</span> · <span class="overdue">due Mar 25</span></li>
+<li><span class="task-name">Barbara request</span> · <span class="overdue">due Mar 25</span></li>
+<li><span class="task-name">Buy TRX + bands, barbell cushion set San Gwann</span> · <span class="overdue">due Mar 24</span></li>
 </ul>
-</div>
 </div>
 
 <div class="section">
-<div class="section-title">Urgent & Important</div>
+<div class="section-title">Urgent &amp; Important</div>
 <ul>
-<li><span class="task-name">Tifa Phase 4 Roadmap — HR System Build</span> <span class="due">— due Mar 30</span>
-<div class="alert-item">Subtasks still empty (3rd night). Day 1 was due Mar 23. Arieth offered to build the 7 subtasks tonight — pending your call.</div>
-</li>
+<li><span class="task-name">Financial reconciliation task</span> · <span class="overdue">due Mar 25 — overdue</span></li>
+<li><span class="task-name">Tifa Phase 4 Roadmap — HR System Build</span> · <span class="due">due Mar 30</span> — Arieth flagged subtasks still missing (4th night)</li>
+<li><span class="task-name">Fix AI issues</span> · <span class="overdue">due Mar 24 — Day 20 blocked</span> — Kieran (CRM) not responding</li>
 </ul>
 </div>
 
 <div class="section">
 <div class="section-title">Email</div>
-<div class="email-sub">Work (Outlook — ! Carlin)</div>
+<div style="color: #cc0000; font-weight: 600; margin-bottom: 6px;">Work (Outlook — ! Carlin)</div>
 <ul>
-<li><span class="task-name">RE: Home Internet & TV</span> <span class="due">— from Kirsty Busuttil, Mar 24</span>
-<div style="color:#999;font-size:.85rem;margin-top:4px">Business tariff offer for home internet. Can match gym package rate but as business tariff. Offers to pass to residential team if you prefer residential pricing.</div>
-</li>
+<li><span class="task-name">Barbara Raisa appointment rescheduled</span> — from Identity Malta (gov.mt). Appointment moved to Friday at 10:00 instead of 14:00. Respond if 10:00 doesn’t work.</li>
+<li><span class="task-name">Home Internet &amp; TV — Go</span> — Kirsty Busuttil replied. She handles business clients only, can offer same package as gym tariff. Residential pack needs different rep. Decide: business or residential?</li>
 </ul>
-<div class="email-sub">Personal (Gmail)</div>
+<hr class="divider">
+<div style="color: #cc0000; font-weight: 600; margin-bottom: 6px;">Personal (Gmail)</div>
 <ul>
-<li><span class="task-name">Google Workspace billing starts tomorrow</span> <span class="due">— carlinpolidano@gmail.com free trial ending</span></li>
-<li><span class="task-name">Deepsearch AI subscription suspended</span> <span class="due">— payment method issue, needs attention</span></li>
-<li><span class="task-name">Google Business Profile post removed</span> <span class="due">— content policy flag, review needed</span></li>
+<li><span class="task-name">Christabella Vella — “Fw: Test Information”</span> — forwarded Niumee Group test info. “Xtahseb naghmlu jew le” — needs your review.</li>
+<li><span class="task-name">YFSS/MEYR — Government circular</span> — Access for Personal Assistants Supporting Persons with Disabilities. Read-only.</li>
+<li><span class="task-name">Skolasajf 2026 applications open</span> — deadline May 4. Kids’ summer programme.</li>
 </ul>
+<div class="muted" style="margin-top: 6px;">No other urgent business emails. Rest is promos and newsletters.</div>
 </div>
 
 <div class="section">
 <div class="section-title">Slack — #ops-daily</div>
-<div class="slack-summary">
-<strong>Dylan</strong> confirmed tonight's consultation cancelled (lead already consulted last week — not a no-show). Interviews scheduled: <strong>Friday 11am</strong> and <strong>Mon 30th 11:30am</strong>. SPC template briefing deadline is <strong>Thursday March 26</strong> — Dylan has not yet confirmed completion. Sephiroth posted the SPC Action Tracker hold message to Dylan with the full briefing checklist.
-</div>
+Sephiroth posted Dylan’s 9 new tasks from yesterday’s 1-on-1 — all in Asana with deadlines. Dylan confirmed his schedule change next week: Mon/Wed/Fri at San Gwann, Tue/Thu at Paola. Flagged that Kirk isn’t at Luqa on Thursdays — needs coverage plan. Dylan also raised issues with the mapping sheet — staff haven’t responded yet. Carlin flagged that Alice wasn’t moving opportunities in the CRM and spoke to her directly.
 </div>
 
-<div class="footer">SEPHIROTH · Fit Stop Daily Briefing</div>
+<footer>SEPHIROTH · Fit Stop Daily Briefing</footer>
 
 </body>
 </html>
